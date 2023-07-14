@@ -1,0 +1,31 @@
+<h3>Sign In</h3>
+
+<form action="/admin/login" method="post">
+
+    <label for="username"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="username">
+
+    <label for="password"><b>Password</b></label>
+    <input type="text" placeholder="Enter Password" name="password">
+
+    <div style="display: flex;  justify-content: space-between;">
+        <input type="submit" value="Login" class="btn" style="font-size: var(--font-size);">
+        <a href="/admin/register" class="btn">Register</a>
+    </div>
+
+
+</form>
+
+<% if (local.message) { %>
+<script>
+    const message = '<%- local.message.replace(/'/g, "\\'"); %>';
+    document.addEventListener('DOMContentLoaded', function() {
+      window.alert( message );
+    });
+  </script>
+<% } %>
+ 
+ 
+  
+
+  
